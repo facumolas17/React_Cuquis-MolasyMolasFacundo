@@ -4,7 +4,7 @@ const NavBar = () => {
   return (
     <>
        <nav className="navbar navbar-expand-lg navbar-light py-3">
-            <a className="navbar-brand" href="#"><img className="img-fluid img-logo" src="" alt="Logo empresarial"></img></a>
+            <a className="navbar-brand" href="#"><img className="img-fluid img-logo" src={require("../assets/images/logo.png")} alt="Logo empresarial"></img></a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
