@@ -2,11 +2,16 @@ import React from 'react';
 import ItemCount from './ItemCount';
 
 const ItemListContainer = () => {
+  const onAdd= (cont) =>{
+
+    console.log(`Se agregaron al carrito ${cont} unidades`);
+  }
+
   return (
-    <>
+    <div>
         
-        <ItemCount initial={0} stock={5}/>
-    </>
+        <ItemCount initial={1} stock={5} onAdd={onAdd}/>
+    </div>
   )
 }
 
