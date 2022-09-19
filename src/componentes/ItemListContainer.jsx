@@ -1,17 +1,28 @@
 import React from 'react';
-import ItemCount from './ItemCount';
+import getItems from '../contenedores/productos';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import ItemList from './ItemList';
 
 const ItemListContainer = () => {
-  const onAdd= (cont) =>{
-
-    console.log(`Se agregaron al carrito ${cont} unidades`);
-  }
+  
+  let [data,setData]=useState([]);
+ 
+  useEffect(() => {
+    getItems().then((respuestaDatos) => {
+      setData(respuestaDatos);
+    });
+  },[])
 
   return (
-    <div>
-        
-        <ItemCount initial={1} stock={5} onAdd={onAdd}/>
+    <div>  
+     
+      <ItemList data={data}/>  
+            
     </div>
+        
+
+    
   )
 }
 

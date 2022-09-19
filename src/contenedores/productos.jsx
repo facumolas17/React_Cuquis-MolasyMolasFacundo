@@ -62,11 +62,17 @@ const productos=[
         "precio":12500,  
         "name":"ROBIN",
         "image": "robin",
-        "title": "Banquito baúl de juegos",
+        "title": "ROBIN Banquito baúl de juegos",
         "descriptionGeneral":"Banquito baúl de madera. Niños 1 a 8 años. Taburete y espacio de guardado en madera melamina color blanco espesor 18mm. Laterales panel fenólico tono natural espesor 14 mm. Herrajes en acero inoxidable. Dimensiones: 38 cm profundidad x 32 cm ancho x 29 cm alto."
 }
 
 
 ];
 
-export default productos;
+export default function getItems(){
+      return new Promise((resolve,reject) => {
+            setTimeout(() => {
+                  resolve(productos);
+            },2000);
+      })
+}
