@@ -20,8 +20,8 @@ const ItemCount = ({initial, stock, onAdd}) => {
 
   return (
     <div>
-        <div    >
-            <div className="text-center">
+        <div>
+            <div className="text-center ">
                 <button href="#" className='btn btn-outline-secondary m-3' disabled={cont <= 1} onClick={decrementarCant} >-</button>
                 <span>{cont}</span>
                 <button href="#" className='btn btn-outline-secondary m-3' disabled={cont>=stock} onClick={incrementarCant}>+</button>

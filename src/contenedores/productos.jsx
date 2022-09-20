@@ -46,15 +46,6 @@ const productos=[
         "title": "RINGO baúl de guardado",
         "descriptionGeneral":"Baúl de madera. Niños 1 a 8 años.Taburete y espacio de guardado en madera melamina color blanco espesor 18mm. Laterales panel fenólico tono natural espesor 14 mm. Herrajes en acero inoxidable. Bisagras soft close. Manijas de agarre. Dimensiones: 70 cm largo x 45 cm ancho x 38 cm alto."
   },
-  { 
-        "id":6,
-        "stock":5,
-        "precio":37500,  
-        "name":"BIBLIOTECA LUCY",
-        "image": "lucy",
-        "title": "Biblioteca / Estantería / Repisa.",
-        "descriptionGeneral":"Biiblioteca de madera. Estantes horizontales de guardado en madera melamina color blanco espesor 18mm. Laterales panel fenólico tono natural espesor 14 mm. Manijas de agarre. Dimensiones: 70 cm largo x 44 cm ancho x 85 cm alto."
-  },
 
   { 
         "id":7,
