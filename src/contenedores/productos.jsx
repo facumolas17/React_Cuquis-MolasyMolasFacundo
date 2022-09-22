@@ -67,3 +67,11 @@ export default function getItems(){
             },2000);
       })
 }
+
+export function getItemDetail(){
+      return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                  resolve(productos[1]);
+            },2000);
+      })
+}
