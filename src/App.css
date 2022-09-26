@@ -37,4 +37,7 @@
 
  }
 
- 
+ .detail{
+  width: 600px !important; 
+  height: 900px !important;
+ }

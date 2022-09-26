@@ -73,5 +73,5 @@ export function getItemDetail(){
             setTimeout(() => {
                   resolve(productos[1]);
             },2000);
-      })
+      }) 
 }
