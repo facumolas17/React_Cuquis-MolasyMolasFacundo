@@ -1,18 +1,27 @@
 import React from 'react';
-import getItems from '../contenedores/productos';
+import getItems, { getItemsByCategory } from '../contenedores/productos';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import ItemList from './ItemList';
-
+import { useParams } from 'react-router-dom';
 const ItemListContainer = () => {
   
   let [data,setData]=useState([]);
+
+  const cat=useParams().cat;
  
   useEffect(() => {
-    getItems().then((respuestaDatos) => {
-      setData(respuestaDatos);
-    });
-  },[])
+    if(cat === undefined){
+      getItems().then((respuestaDatos) => {
+        setData(respuestaDatos);
+      });
+    }
+    else{
+      getItemsByCategory(cat).then((respuestaDatos) => {
+        setData(respuestaDatos);
+      });
+    }
+  },[cat])
 
   return (
     <div>  
