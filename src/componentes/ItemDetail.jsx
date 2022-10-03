@@ -1,11 +1,16 @@
 import React from 'react';
+import { useState } from 'react';
 import imgDetail from '../assets/images/img-eleonor.jpg';
 import ItemCount from './ItemCount';
+import { Link } from 'react-router-dom';
 
 const ItemDetail = ({prod}) => { 
 
-  const onAdd= (cont) =>{
+  const [estadoCart,setEstadoCart] = useState(false);
+
+  const onAddToCart= (cont) =>{
     console.log(`Se agregaron al carrito ${cont} unidades`);
+    setEstadoCart(true);
   }
 
   return (
@@ -16,7 +21,8 @@ const ItemDetail = ({prod}) => {
           <h5 className='card-subtitle text-muted' >{prod.title}</h5>
           <p className='text-secondary'>{prod.descriptionGeneral}</p>
           <h6 className='card-text pt-2 text-secondary'>${prod.precio}</h6>
-          <ItemCount initial={1} stock={5} onAdd={onAdd}/>
+          
+          { estadoCart === true? <Link to='/cart' className='btn btn-outline-secondary m-3'>Terminar compra</Link>  : <ItemCount initial={1} stock={5} onAddToCart={onAddToCart}/> }
         </div>         
     </div>
   )
