@@ -1,9 +1,13 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import { cartCtx } from '../context/cartContext';
 
 const CartWidget = () => {
+
+  const {cartItems} = useContext(cartCtx);
+
   return (
     <>
-        <a className="nav-link" href="#"><i className="bi bi-cart2"></i></a>
+        <a className="nav-link" href="#"><i className="bi bi-cart2"><span>{cartItems.length}</span></i></a>
     </>
   )
 }

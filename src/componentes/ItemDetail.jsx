@@ -1,16 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useState } from 'react';
 import imgDetail from '../assets/images/img-eleonor.jpg';
 import ItemCount from './ItemCount';
 import { Link } from 'react-router-dom';
+import { cartCtx } from '../context/cartContext';
 
 const ItemDetail = ({prod}) => { 
 
+
+  const { addItem } = useContext(cartCtx);
+  
   const [estadoCart,setEstadoCart] = useState(false);
 
   const onAddToCart= (cont) =>{
-    console.log(`Se agregaron al carrito ${cont} unidades`);
     setEstadoCart(true);
+    addItem(prod, cont);
   }
 
   return (
