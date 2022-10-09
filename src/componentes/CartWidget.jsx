@@ -3,11 +3,11 @@ import { cartCtx } from '../context/cartContext';
 
 const CartWidget = () => {
 
-  const {cartItems} = useContext(cartCtx);
+  const { getItemQty } = useContext(cartCtx);
 
   return (
     <>
-        <a className="nav-link" href="#"><i className="bi bi-cart2"><span>{cartItems.length}</span></i></a>
+        <a className="nav-link" href="#"><i className="bi bi-cart2"><span>{getItemQty()}</span></i></a>
     </>
   )
 }

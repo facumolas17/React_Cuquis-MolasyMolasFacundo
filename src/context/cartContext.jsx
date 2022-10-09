@@ -32,9 +32,25 @@ export default function cartContextProvider({children}){
         return found;
     }
 
+    function emptyCart(){
+        return setCartItems([]);
+    }
+
+    function deleteItem(id){
+        return setCartItems(cartItems.filter(item => item.id !== id));
+    }
+
+    function getItemQty(){
+        return cartItems.reduce((acc, x) => acc +=x.cont, 0);
+    }
+
+    function getItemPrice(){
+        return cartItems.reduce((acc, x) => acc += x.precio * x.cont, 0);
+    }
+
     return(
         //Acá pasamos el objeto value a los componentes hijos
-        <cartCtx.Provider value={ {cartItems, addItem, isInCart} }>
+        <cartCtx.Provider value={ {cartItems, addItem, isInCart, emptyCart, deleteItem, getItemQty, getItemPrice} }>
             { children }
         </cartCtx.Provider> 
     )
