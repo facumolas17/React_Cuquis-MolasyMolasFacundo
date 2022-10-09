@@ -7,16 +7,35 @@ import { useParams } from 'react-router-dom';
 
 const ItemDetailContainer = () => {
 
-    let [prod, setProd]=useState({});
+    const [prod, setProd]=useState({});
+
+    const [error,setError] = useState(false);
 
     const id = useParams().id;
 
     useEffect(() => {
-        getItemDetail(id).then((respuestaDatos) => {
-            setProd(respuestaDatos);    
-        });
+        getItemDetail(id)
+        .then((respuestaDatos) => setProd(respuestaDatos))
+        .catch((errorMsg) => {
+          setError(errorMsg.message)   
+      });
     },[id])
 
+    if(!prod.name){
+      return <>
+      
+        {
+          error ?
+          <div>
+            <h2 style={ {color: "#aa0033"}}>Error obteniendo los datos</h2>
+            <p>{ error }</p> 
+          </div>
+          :
+          <h3>Cargando . . .</h3>
+        }
+
+      </>
+    }
 
   return (
     <div>
