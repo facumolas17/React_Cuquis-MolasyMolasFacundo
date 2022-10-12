@@ -7,7 +7,7 @@ const CartWidget = () => {
 
   return (
     <>
-        <a className="nav-link" href="#"><i className="bi bi-cart2"><span>{getItemQty()}</span></i></a>
+        <a className="nav-link" href="#"><i className="bi bi-cart2"><span>{getItemQty() > 0 && getItemQty()}</span></i></a>
     </>
   )
 }

@@ -3,6 +3,9 @@ import { useEffect } from 'react';
 import { getItemDetail } from '../contenedores/productos';
 import ItemDetail from './ItemDetail';
 import { useParams } from 'react-router-dom';
+import { DotWave } from '@uiball/loaders';
+
+
 
 
 const ItemDetailContainer = () => {
@@ -31,7 +34,13 @@ const ItemDetailContainer = () => {
             <p>{ error }</p> 
           </div>
           :
-          <h3>Cargando . . .</h3>
+          <h3>
+            <DotWave 
+              size={47}
+              speed={1} 
+              color="black" 
+            />
+         </h3>
         }
 
       </>

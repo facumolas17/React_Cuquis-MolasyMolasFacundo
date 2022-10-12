@@ -26,7 +26,7 @@ const ItemDetail = ({prod}) => {
           <p className='text-secondary'>{prod.descriptionGeneral}</p>
           <h6 className='card-text pt-2 text-secondary'>${prod.precio}</h6>
           
-          { estadoCart === true? <Link to='/cart' className='btn btn-outline-secondary m-3'>Terminar compra</Link>  : <ItemCount initial={1} stock={5} onAddToCart={onAddToCart}/> }
+          { estadoCart === true? <Link to='/cart' className='btn btn-outline-secondary m-3'>Ir al carrito</Link>  : <ItemCount initial={1} stock={prod.stock} onAddToCart={onAddToCart}/> }
         </div>         
     </div>
   )
