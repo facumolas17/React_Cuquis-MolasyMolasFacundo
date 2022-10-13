@@ -19,7 +19,7 @@ const ItemDetail = ({prod}) => {
 
   return (
     <div>
-        <div className='container text-center detail'>        
+        <div className='container text-center detail d-flex flex-column align-items-center'>        
           <img className='img-fluid col-md-6 mb-3' src={imgDetail} alt='imagen producto' />
           <h4 className='card-subtitle text-muted' >{prod.name}</h4>
           <h5 className='card-subtitle text-muted' >{prod.title}</h5>
@@ -27,6 +27,7 @@ const ItemDetail = ({prod}) => {
           <h6 className='card-text pt-2 text-secondary'>${prod.precio}</h6>
           
           { estadoCart === true? <Link to='/cart' className='btn btn-outline-secondary m-3'>Ir al carrito</Link>  : <ItemCount initial={1} stock={prod.stock} onAddToCart={onAddToCart}/> }
+          <Link className='btn btn-outline-secondary' to='/'>Click aquí para seguir comprando</Link>
         </div>         
     </div>
   )

@@ -6,13 +6,13 @@ import { Link } from 'react-router-dom';
 const CartView = () => {
 
   const context = useContext(cartCtx);
-  const { cartItems, emptyCart, deleteItem } = context;
+  const { cartItems, emptyCart, deleteItem, getTotalPrice } = context;
 
   if(cartItems.length === 0){
     return (
       <>
-        <p>No hay productos seleccionados en el carrito</p>
-        <Link className='btn btn-outline-secondary' to='/'>Click aquí para seguir comprando</Link>
+        <p>No hay productos seleccionados</p>
+        <Link className='btn btn-outline-secondary' to='/'>Click aquí para comprar</Link>
       </>
       )
   }
@@ -34,6 +34,18 @@ const CartView = () => {
         ))
           
       }
+    
+
+    <div className='d-flex flex-column align-items-center'>
+      --------------------------------------------------------
+      <p className='text-center mt-2' ><strong> Total: {getTotalPrice()}</strong></p>
+      <button className='btn btn-outline-warning pequeño m-2 ' onClick={emptyCart}>Vaciar carrito</button>
+      <button className='btn btn-outline-warning pequeño'>Finalizar compra</button>
+    </div>
+
+
+        
+        
       
     </div>
     
