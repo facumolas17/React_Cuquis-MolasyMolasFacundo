@@ -1,13 +1,13 @@
 import React, {useContext} from 'react';
 import { cartCtx } from '../context/cartContext';
-
+import { Link } from 'react-router-dom';
 const CartWidget = () => {
 
   const { getItemQty } = useContext(cartCtx);
 
   return (
     <>
-        <a className="nav-link" href="#"><i className="bi bi-cart2"><span>{getItemQty() > 0 && getItemQty()}</span></i></a>
+        <Link className="nav-link" to='/cart'><i className="bi bi-cart2"><span>{getItemQty() > 0 && getItemQty()}</span></i></Link>
     </>
   )
 }

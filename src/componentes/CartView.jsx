@@ -1,12 +1,23 @@
-import { Button } from 'bootstrap';
 import React from 'react';
 import { useContext } from 'react';
 import { cartCtx } from '../context/cartContext';
+import { Link } from 'react-router-dom';
 
 const CartView = () => {
 
   const context = useContext(cartCtx);
   const { cartItems, emptyCart, deleteItem } = context;
+
+  if(cartItems.length === 0){
+    return (
+      <>
+        <p>No hay productos seleccionados en el carrito</p>
+        <Link className='btn btn-outline-secondary' to='/'>Click aquí para seguir comprando</Link>
+      </>
+      )
+  }
+
+
   return (
     <div>
       {
@@ -21,11 +32,13 @@ const CartView = () => {
             
           </div>
         ))
-      
+          
       }
       
     </div>
+    
   )
+  
 }
 
 export default CartView;
