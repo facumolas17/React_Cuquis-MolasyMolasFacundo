@@ -41,3 +41,7 @@
   width: 600px !important; 
   height: 900px !important;
  }
+
+ .pequeño{ /*Tamaño del botn pequeño*/
+  max-width:150px;
+ } 

@@ -48,9 +48,15 @@ export default function cartContextProvider({children}){
         return cartItems.reduce((acc, x) => acc += x.precio * x.cont, 0);
     }
 
+    function getTotalPrice(){
+        return cartItems.reduce((acc, x) => acc += x.cont * x.precio,0);
+    }
+
+    
+
     return(
         //Acá pasamos el objeto value a los componentes hijos
-        <cartCtx.Provider value={ {cartItems, addItem, isInCart, emptyCart, deleteItem, getItemQty, getItemPrice} }>
+        <cartCtx.Provider value={ {cartItems, addItem, isInCart, emptyCart, deleteItem, getItemQty, getItemPrice, getTotalPrice} }>
             { children }
         </cartCtx.Provider> 
     )

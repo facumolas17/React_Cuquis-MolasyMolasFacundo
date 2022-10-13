@@ -1,3 +1,4 @@
+import { Button } from 'bootstrap';
 import React from 'react';
 import { useContext } from 'react';
 import { cartCtx } from '../context/cartContext';
@@ -10,12 +11,13 @@ const CartView = () => {
     <div>
       {
         cartItems.map((item) =>(
-          <div key={item.id}>
+          <div className='d-flex flex-column align-items-center '  key={item.id}>
             <h3>{item.name}</h3>
             <p>{item.title}</p>
-            <p>{item.precio}</p>
+            <p>Precio: {item.precio}</p>
             <p>Cantidad: {item.cont}</p>
             <p>Subtotal: {item.cont * item.precio}</p>
+            <button onClick={() => deleteItem(item.id)} className='btn btn-outline-warning pequeño'>Eliminar</button>
             
           </div>
         ))
