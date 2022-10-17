@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { useState } from 'react';
-import imgDetail from '../assets/images/img-eleonor.jpg';
 import ItemCount from './ItemCount';
 import { Link } from 'react-router-dom';
 import { cartCtx } from '../context/cartContext';
@@ -20,7 +19,7 @@ const ItemDetail = ({prod}) => {
   return (
     <div>
         <div className='container text-center detail d-flex flex-column align-items-center'>        
-          <img className='img-fluid col-md-6 mb-3' src={imgDetail} alt='imagen producto' />
+          <img className='img-fluid col-md-6 mb-3' src={prod.image} alt='imagen producto' />
           <h4 className='card-subtitle text-muted' >{prod.name}</h4>
           <h5 className='card-subtitle text-muted' >{prod.title}</h5>
           <p className='text-secondary'>{prod.descriptionGeneral}</p>
