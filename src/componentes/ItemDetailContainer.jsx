@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
-import { getItemDetail } from '../contenedores/productos';
+import { getItemDetail } from '../contenedores/firestore';
 import ItemDetail from './ItemDetail';
 import { useParams } from 'react-router-dom';
 import { DotWave } from '@uiball/loaders';

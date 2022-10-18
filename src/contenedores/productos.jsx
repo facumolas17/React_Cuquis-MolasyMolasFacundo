@@ -2,7 +2,6 @@ import React from 'react';
 const productos=[
   {
         "id":1,  
-        "stock":5,
         "precio":15700,
         "name":"CAROL",
         "image": "/assets/images/img-carol.jpg",
@@ -13,7 +12,6 @@ const productos=[
   },
   {
         "id":2,  
-        "stock":5,
         "precio":8900,
         "name":"ELEONOR",
         "image": "/assets/images/img-eleonor.jpg",
@@ -23,7 +21,6 @@ const productos=[
         "descriptionGeneral":"Banquito escalera de madera. Niños 1 a 6 años. Taburete y escalón en madera melamina color blanco espesor 18mm. Laterales panel fenólico tono natural espesor 14 mm. Dimensiones: 38 cm profundidad x 30 cm ancho x 20 cm alto"
   },
   {     "id":3,  
-        "stock":5,
         "precio":10900,
         "name":"GALILEO",
         "image": "/assets/images/img-galileo.jpg",
@@ -35,7 +32,6 @@ const productos=[
   },
   {       
         "id":4,  
-        "stock":5,
         "precio":12500,
         "name":"PEPPER",
         "image": "/assets/images/img-pepper.jpg",
@@ -47,7 +43,6 @@ const productos=[
   },
   {     
         "id":5, 
-        "stock":5,
         "precio":25700, 
         "name":"RINGO",
         "image": "/assets/images/img-ringo.jpg",
@@ -58,8 +53,7 @@ const productos=[
   },
 
   { 
-        "id":7,
-        "stock":5,
+        "id":6,
         "precio":12500,  
         "name":"ROBIN",
         "image": "/assets/images/img-robin.jpg",
@@ -70,10 +64,9 @@ const productos=[
 },
 
 {
-      "id":8,  
-      "stock":5,
+      "id":7,  
       "precio":23700,
-      "name":"Combo ringo",
+      "name":"COMBO RINGO",
       "image": "/assets/images/img-ringo.jpg",
       "title": "mesa de juegos",
       "categoria":"combos",
@@ -82,10 +75,9 @@ const productos=[
 },
 
 {
-      "id":9,  
-      "stock":5,
+      "id":8,  
       "precio":19700,
-      "name":"Combo Carol",
+      "name":"COMBO CAROL",
       "image": "/assets/images/img-carol.jpg",
       "title": "mesa de juegos",
       "stock":6,

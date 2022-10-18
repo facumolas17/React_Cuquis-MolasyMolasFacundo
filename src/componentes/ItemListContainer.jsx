@@ -1,5 +1,5 @@
 import React from 'react';
-import getItems, { getItemsByCategory } from '../contenedores/productos';
+import  { getItems, getItemsByCategory } from '../contenedores/firestore';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import ItemList from './ItemList';
@@ -27,7 +27,7 @@ const ItemListContainer = () => {
       getItemsByCategory(cat)
         .then((respuestaDatos) => setData(respuestaDatos))
         .finally(() => setIsLoading(false));
-    }
+    } 
   },[cat])
 
   return (

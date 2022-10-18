@@ -23,13 +23,14 @@ const CartView = () => {
       {
         cartItems.map((item) =>(
           <div className='d-flex flex-column align-items-center '  key={item.id}>
+            <img className='img-fluid col-3' src={item.image} />
             <h3>{item.name}</h3>
             <p>{item.title}</p>
             <p>Precio: {item.precio}</p>
             <p>Cantidad: {item.cont}</p>
             <p>Subtotal: {item.cont * item.precio}</p>
             <button onClick={() => deleteItem(item.id)} className='btn btn-outline-warning pequeño'>Eliminar</button>
-            
+            <p>------------------------------</p>
           </div>
         ))
           
