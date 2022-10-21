@@ -1,6 +1,6 @@
 
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs, doc, getDoc, query, where } from "firebase/firestore"; 
+import { getFirestore, collection, getDocs, doc, getDoc, query, where, addDoc, setDoc } from "firebase/firestore"; 
 
 
 const firebaseConfig = {
@@ -46,5 +46,13 @@ export async function getItemsByCategory(cat){
     });
     return dataDocs;
 }
+
+export async function createBuyOrder(orderData){
+
+    const myCollection = collection( firestore, "orders");
+    let respuesta = await addDoc(myCollection,orderData); //Acá esperamos que se cumpla la promesa y cuando se cumple guardamos el resultado en "respuesta".
+
+}
+
 
 export default firestore ;

@@ -2,6 +2,7 @@ import React from 'react';
 import { useContext } from 'react';
 import { cartCtx } from '../context/cartContext';
 import { Link } from 'react-router-dom';
+import { createBuyOrder } from '../contenedores/firestore';
 
 const CartView = () => {
 
@@ -16,6 +17,23 @@ const CartView = () => {
       </>
       )
   }
+
+  function handleCheckout(){
+
+      const orderData = {
+        buyer: {
+          name:"Guillermo",
+          phone:"3512126554",
+          email:"guillermo1234@gmail.com"
+        },
+         items: cartItems,
+         total: getTotalPrice()
+      }
+
+      createBuyOrder(orderData);
+  }
+
+  
 
 
   return (
@@ -41,7 +59,7 @@ const CartView = () => {
       --------------------------------------------------------
       <p className='text-center mt-2' ><strong> Total: {getTotalPrice()}</strong></p>
       <button className='btn btn-outline-warning pequeño m-2 ' onClick={emptyCart}>Vaciar carrito</button>
-      <button className='btn btn-outline-warning pequeño'>Finalizar compra</button>
+      <button onClick={handleCheckout} className='btn btn-outline-warning pequeño'>Finalizar compra</button>
     </div>
 
 
