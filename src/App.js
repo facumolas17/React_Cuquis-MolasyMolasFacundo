@@ -5,6 +5,7 @@ import NavBar from './componentes/NavBar';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import CartContextProvider from './context/cartContext';
 import CartView from './componentes/CartView';
+import Checkout from './componentes/Checkout';
 function App() {
 
   return (
@@ -30,6 +31,10 @@ function App() {
 
             <Route path="/cart" element={
               <CartView/>
+            }/>
+            
+            <Route path="/checkout/:nroOrden" element={
+            <Checkout/>
             }/>
             
           </Routes>

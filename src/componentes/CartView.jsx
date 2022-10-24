@@ -2,12 +2,13 @@ import React from 'react';
 import { useContext } from 'react';
 import { cartCtx } from '../context/cartContext';
 import { Link } from 'react-router-dom';
-import { createBuyOrder } from '../contenedores/firestore';
+import CheckoutForm from './CheckoutForm';
 
 const CartView = () => {
 
   const context = useContext(cartCtx);
   const { cartItems, emptyCart, deleteItem, getTotalPrice } = context;
+  
 
   if(cartItems.length === 0){
     return (
@@ -18,20 +19,7 @@ const CartView = () => {
       )
   }
 
-  function handleCheckout(){
-
-      const orderData = {
-        buyer: {
-          name:"Guillermo",
-          phone:"3512126554",
-          email:"guillermo1234@gmail.com"
-        },
-         items: cartItems,
-         total: getTotalPrice()
-      }
-
-      createBuyOrder(orderData);
-  }
+  
 
   
 
@@ -55,12 +43,13 @@ const CartView = () => {
       }
     
 
-    <div className='d-flex flex-column align-items-center'>
-      --------------------------------------------------------
-      <p className='text-center mt-2' ><strong> Total: {getTotalPrice()}</strong></p>
-      <button className='btn btn-outline-warning pequeño m-2 ' onClick={emptyCart}>Vaciar carrito</button>
-      <button onClick={handleCheckout} className='btn btn-outline-warning pequeño'>Finalizar compra</button>
-    </div>
+      <div className='d-flex flex-column align-items-center'>
+        --------------------------------------------------------
+        <p className='text-center mt-2' ><strong> Total: {getTotalPrice()}</strong></p>
+        <button className='btn btn-outline-warning pequeño m-2 ' onClick={emptyCart}>Vaciar carrito</button>
+        <CheckoutForm/>
+        
+      </div>
 
 
         

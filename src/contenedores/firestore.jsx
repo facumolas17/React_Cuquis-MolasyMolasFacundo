@@ -52,6 +52,7 @@ export async function createBuyOrder(orderData){
     const myCollection = collection( firestore, "orders");
     let respuesta = await addDoc(myCollection,orderData); //Acá esperamos que se cumpla la promesa y cuando se cumple guardamos el resultado en "respuesta".
 
+    return respuesta.id;
 }
 
 
