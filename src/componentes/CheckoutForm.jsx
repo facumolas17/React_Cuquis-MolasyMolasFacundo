@@ -24,6 +24,7 @@ const CheckoutForm = () => {
         const orderData = {
         buyer: dataForm,
         items: cartItems,
+        date: new Date(),
         total: getTotalPrice()
         }
 
