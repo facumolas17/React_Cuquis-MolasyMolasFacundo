@@ -1,51 +1,53 @@
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #ffffff;
-  }
-  
-  html,body{
-    font-size: 18px;
-    color:#000000;
-    
-    
-  }
-  
-  .nav-link{
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-    color: black !important;
-    font-weight: 500;
-    padding: 0 15px !important;
-  }
-  
-  .nav-link:hover{
-    color:rgba(0, 0, 0, 0.438)!important;
-    transition: .6s all;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
 
-  .img-logo{
-    width:250px;
-    height: 100%;
-    object-fit: cover ;
-  }
+html,
+body {
+  font-size: 18px;
+  color: #000000;
 
- .card-carrito{
-  width:100%;
+
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: black !important;
+  font-weight: 500;
+  padding: 0 15px !important;
+}
+
+.nav-link:hover {
+  color: rgba(0, 0, 0, 0.438) !important;
+  transition: .6s all;
+}
+
+.img-logo {
+  width: 250px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-carrito {
+  width: 100%;
   height: 300px;
 
- }
+}
 
- .detail{
-  width: 600px !important; 
+.detail {
+  width: 600px !important;
   height: 900px !important;
- }
+}
 
- .pequeño{ /*Tamaño del botn pequeño*/
-  max-width:150px;
- } 
+.pequeño {
+  /*Tamaño del botn pequeño*/
+  max-width: 150px;
+}
 
- form {
+form {
   width: 30rem;
- }
+}
