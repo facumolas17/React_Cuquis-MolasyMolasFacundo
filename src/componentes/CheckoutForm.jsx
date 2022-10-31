@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
-import { cartCtx } from "../context/cartContext";
+import { cartCtx } from "../context/CartContext";
 import { createBuyOrder } from "../contenedores/firestore";
 
 const CheckoutForm = () => {
