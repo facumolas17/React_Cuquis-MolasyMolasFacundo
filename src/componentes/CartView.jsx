@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import CheckoutForm from "./CheckoutForm";
 
 const CartView = () => {
-  const context = useContext(cartCtx);
+  const context = useContext(cartCtx); 
   const { cartItems, emptyCart, deleteItem, getTotalPrice } = context;
 
   if (cartItems.length === 0) {
