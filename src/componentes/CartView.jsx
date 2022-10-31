@@ -23,7 +23,7 @@ const CartView = () => {
     <div>
       {cartItems.map((item) => (
         <div className="d-flex flex-column align-items-center " key={item.id}>
-          <img className="img-fluid col-3" src={item.image} />
+          <img className="img-fluid col-3" src={item.image} alt="imagen producto" />
           <h3>{item.name}</h3>
           <p>{item.title}</p>
           <p>Precio: {item.precio}</p>
