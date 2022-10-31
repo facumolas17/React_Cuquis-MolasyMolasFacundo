@@ -15,7 +15,7 @@ const CheckoutForm = () => {
 
     const navigate = useNavigate();
     const context = useContext(cartCtx);
-    const { cartItems, getTotalPrice } = context;
+    const { cartItems, getTotalPrice, emptyCart } = context;
 
     function handleCheckout(event){
 
@@ -31,6 +31,7 @@ const CheckoutForm = () => {
         createBuyOrder(orderData).then( nroOrden => {
         navigate(`/checkout/${nroOrden}`)
         })
+        emptyCart();
 }
 
     function inputChangeHandler(event){
@@ -47,7 +48,8 @@ const CheckoutForm = () => {
 
   return (
     <div>
-        <form onSubmit={handleCheckout} className='d-flex flex-column '>
+        <h3 className='text-center mt-3'>Ingrese sus datos:</h3>
+        <form onSubmit={handleCheckout} className='d-flex flex-column mb-3'>
             <div className="form-row">
 
                 <div className="form-group col-12">
@@ -71,7 +73,7 @@ const CheckoutForm = () => {
                 
             </div>
             
-            <button type="submit" className="btn btn-primary mt-2 ">Finalizar compra</button>
+            <button type="submit" className="btn btn-warning mt-2 ">Finalizar compra</button>
         </form>
         
 

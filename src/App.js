@@ -6,6 +6,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import CartContextProvider from './context/cartContext';
 import CartView from './componentes/CartView';
 import Checkout from './componentes/Checkout';
+import Header from './componentes/Header';
 function App() {
 
   return (
@@ -14,7 +15,8 @@ function App() {
       <CartContextProvider>
 
         <BrowserRouter>
-          <NavBar/>
+          <NavBar />
+          <Header />
           <Routes>
             
             <Route path="/" element={

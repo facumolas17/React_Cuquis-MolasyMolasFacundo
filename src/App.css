@@ -45,3 +45,7 @@
  .pequeño{ /*Tamaño del botn pequeño*/
   max-width:150px;
  } 
+
+ form {
+  width: 30rem;
+ }
