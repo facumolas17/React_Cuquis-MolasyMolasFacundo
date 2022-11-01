@@ -16,7 +16,12 @@ Este proyecto fue creado con [Create React App]
 
 ## Además utlizamos herramientas como:
 
-![Bootstrap](https://img.shields.io/badge/-Bootstrap-blueviolet)
+Bootstrap
+![Bootstrap](https://img.shields.io/badge/-Bootstrap-blueviolet) para darle estilo
+
+Hooks de ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) para darle funcionalidad ----> useState, useParams, useEffect, ReactRouter
+
+
 
 
 
