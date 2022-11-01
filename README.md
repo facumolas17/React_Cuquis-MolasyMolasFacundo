@@ -23,9 +23,13 @@ Es mi proyecto final del curso de React para la academia online CODERHOUSE, Buen
 
 ![React](https://img.shields.io/badge/-React-black) hooks para darle funcionalidad ----> useState, useParams, useEffect, ReactRouter.
 
+## Base de datos utilizada: 
+
+![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white)
+
 ## Para probar mi proyecto podrías realizar lo siguiente:
 
-. En tu consola:
+ En tu consola:
 
 1. Cloná mi repositorio mediante el comando --> git clone https://github.com/facumolas17/React_Cuquis-MolasyMolasFacundo.git
 
