@@ -16,8 +16,7 @@ Este proyecto fue creado con [Create React App]
 
 ## Además utlizamos herramientas como:
 
-(https://img.shields.io/static/v1?label=<LABEL>&Bootstrap=<MESSAGE>&blueviolet=<COLOR>) para darle estilo
-
+https://img.shields.io/badge/-Bootstrap-blueviolet
 
 
 
