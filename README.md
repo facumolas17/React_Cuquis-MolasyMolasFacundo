@@ -1,8 +1,12 @@
-# Getting Started with Create React App
+# Bienvenidos a la presentación de mi proyecto final de React para CoderHouse
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto fue creado con [Create React App]
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 
-## Available Scripts
+
+
+## Los lenguajes utilizados fueron: 
+
 
 In the project directory, you can run:
 
@@ -68,3 +72,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+Mi deploy: 
+
+https://react-molasymolasfacundo.netlify.app/
