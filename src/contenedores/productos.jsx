@@ -88,7 +88,7 @@ const productos=[
 
 ];
 
-export default function getItems(){
+export function getItems(){
       return new Promise((resolve,reject) => {
             setTimeout(() => {
                   resolve(productos);
