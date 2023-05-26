@@ -1,5 +1,5 @@
 import React from "react";
-import { getItems, getItemsByCategory } from "../contenedores/firestore";
+import { getItems, getItemsByCategory } from "../contenedores/productos";
 import { useState } from "react";
 import { useEffect } from "react";
 import ItemList from "./ItemList";
